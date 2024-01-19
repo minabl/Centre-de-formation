@@ -1,0 +1,13 @@
+
+ <div class="card h-100 shadow-sm">
+<img src="{{data.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <div class="clearfix mb-3">
+               <h5 class="card-title float-start"> {{data.nom}}</h5>
+               <span class="float-end badge rounded-pill bg-success">{{data.prix}} DT</span>
+          </div>
+          
+          <p class="card-text">{{data.description}}</p>      
+      <button class="btn btn-primary" *ngIf="!addButton" (click)=" add();addButton = false" >Add To Cart</button>
+</div>   
+</div>

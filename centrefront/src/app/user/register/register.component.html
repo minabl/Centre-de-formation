@@ -1,0 +1,85 @@
+
+    <div class="container">
+
+      <!-- Outer Row -->
+      <div class="row justify-content-center">
+  
+          <div class="col-xl-10 col-lg-12 col-md-9">
+  
+              <div class="card o-hidden border-0 shadow-lg my-5">
+                  <div class="card-body p-0">
+                      <!-- Nested Row within Card Body -->
+                      <div class="row">
+                          <div class="col-lg-6 d-none d-lg-block bg-login"><img src="https://img.freepik.com/free-vector/welcome-word-flat-cartoon-people-characters_81522-4207.jpg?w=2000" width="480" height="490"></div>
+                          <div class="col-lg-6">
+                              <div class="p-5">
+                                  <div class="text-center">
+                                      <h1 class="h4 text-gray-900 mb-4">Welcome </h1>
+                                  </div>
+                                
+                                  <form #f="ngForm" (ngSubmit)="register(f)" >
+                                    <div class="mb-3">
+                                        <label  class="form-label">nom</label>
+                                        <input type="text" class="form-control" name="nom" placeholder="nom" #nom="ngModel"ngModel required="">
+                                        <span style=color:red *ngIf="!nom.valid && nom.touched">Entrez le nom</span>
+                                    </div>
+                                     
+                                      <div class="mb-3">
+                                        <label  class="form-label">Email</label>
+                                        <input type="email" class="form-control" name="email" placeholder="email"  #nom="ngModel" ngModel required>
+                                        <span style=color:red *ngIf="!pass.valid && pass.touched">Entrez le email</span>
+                                    </div>
+                                     
+                                      <div class="mb-3">
+                                        <label  class="form-label">Phone</label>
+                                        <input type="text" class="form-control" name="phone" placeholder="Phone"ngModel #pohone="ngModel"required>
+                                        <span style=color:red *ngIf="!pohone.valid && pohone.touched">Entrez le phone</span>
+                                    </div>
+                                     
+                                      <div class="mb-3">
+                                        <label  class="form-label">Mots du passe</label>
+                                        <input type="password" class="form-control" name="password" placeholder="mots de passe" #pass="ngModel" ngModel required>
+                                        <span style=color:red *ngIf="!pass.valid && pass.touched">Entrez le password</span>
+                                    </div>
+                                     
+                                      <div class="mb-3">
+                                        <label  class="form-label">conform password</label>
+                                        <input type="password" class="form-control" name="cpass" placeholder="confirmer votre mots de passe" ngModel #cpass="ngModel"required>
+                                        <span style=color:red *ngIf="!cpass.valid && cpass.touched">Entrez le conf-password</span>
+                                    </div>
+                                     
+                                      <button type="submit" [disabled]=!f.valid class="btn btn-primary">Register</button>
+                                      
+                            
+                                </form>
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+          </div>
+  
+      </div>
+  
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

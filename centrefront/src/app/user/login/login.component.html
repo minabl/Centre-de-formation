@@ -1,0 +1,53 @@
+
+    <div class="container">
+
+      <!-- Outer Row -->
+      <div class="row justify-content-center">
+  
+          <div class="col-xl-10 col-lg-12 col-md-9">
+  
+              <div class="card o-hidden border-0 shadow-lg my-5">
+                  <div class="card-body p-0">
+                      <!-- Nested Row within Card Body -->
+                      <div class="row">
+                          <div class="col-lg-6 d-none d-lg-block bg-login"><img src="https://www.twaino.com/wp-content/uploads/2022/03/User-Friendly-2.png" width="480" height="490"></div>
+                          <div class="col-lg-6">
+                              <div class="p-5">
+                                  <div class="text-center">
+                                      <h1 class="h4 text-gray-900 mb-4">Welcome User!</h1>
+                                  </div>
+                                <form #f="ngForm" (ngSubmit)="Login(f)" class="col-9" >
+        
+                                    <div class="mb-3">
+                                      <label  class="form-label">Email</label>
+                                      <input type="email" class="form-control" name="email" placeholder="email"  #email="ngModel" ngModel required> 
+                                      <span style=color:red *ngIf="!email.valid && email.touched">Entrez votre email</span>
+                          
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                      <label  class="form-label">Mots du passe</label>
+                                      <input type="password" class="form-control" name="password" placeholder="mots de passe" #pass="ngModel" ngModel required>
+                                      <span style=color:red *ngIf="!pass.valid && pass.touched">Entrez le password</span>
+                                  </div>
+                                    <button type="submit" [disabled]=!f.valid class="btn btn-primary">Login</button>
+                                    <a class="dropdown-item" href="http://localhost:4200/registuser">Cree un compte</a>
+                                    
+                          
+                              </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+          </div>
+  
+      </div>
+  
+  </div>
+
+
+
+
+

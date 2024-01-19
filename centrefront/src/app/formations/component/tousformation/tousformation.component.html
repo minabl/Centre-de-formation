@@ -1,0 +1,13 @@
+
+   <div  class="fax">
+    <div class="box mt-5">
+      
+          <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+            <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3"> 
+                <div class="col"  *ngFor="let item of formations" >
+                  <app-formation [data]="item" (item)="addToCart($event)" ></app-formation>
+                </div>
+              </div>        
+         </div>
+    </div>
+  </div> 
